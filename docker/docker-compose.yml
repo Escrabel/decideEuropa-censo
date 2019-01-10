@@ -1,4 +1,4 @@
-version: '3.4'
+version: '2.0'
 
 services:
   db:
@@ -41,9 +41,9 @@ services:
 
 volumes:
   static:
-    name: decide_static
+    
   db:
-    name: decide_db
+   
 
 networks:
   decide:

@@ -1,3 +1,5 @@
+DEBUG = True
+
 ALLOWED_HOSTS = ["*"]
 
 # Modules in use, commented modules that you won't use

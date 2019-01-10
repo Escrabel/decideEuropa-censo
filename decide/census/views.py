@@ -12,6 +12,7 @@ from rest_framework.status import (
 
 from base.perms import UserIsStaff
 from .models import Census
+from django.shortcuts import render
 
 
 class CensusCreate(generics.ListCreateAPIView):
@@ -32,6 +33,7 @@ class CensusCreate(generics.ListCreateAPIView):
         voting_id = request.GET.get('voting_id')
         voters = Census.objects.filter(voting_id=voting_id).values_list('voter_id', flat=True)
         return Response({'voters': voters})
+        
 
 
 class CensusDetail(generics.RetrieveDestroyAPIView):
